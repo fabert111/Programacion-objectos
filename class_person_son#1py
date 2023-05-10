@@ -1,0 +1,49 @@
+class Person:
+    def __init__(self, name, age, profession):
+        self.name = name
+        self.age = age
+        self.profession = profession
+        
+
+    def greet(self):
+        print("Hola que mas, mi nombre es " + self.name)
+
+    def best_regard(self):
+        print("Que mas, me llamo " + self.name + ", tengo " + str(self.age) + " años y soy " + self.profession)
+
+    def xxx_ppp(self):
+        print(f"Me llaman el poderoso {self.name} y tengo {self.age} y {self.profession}.")
+    
+class Student(Person):
+    def __init__(self, name, age, profession, university):
+        super().__init__(name, age, profession)
+        self.university = university
+
+    def study(self):
+        print(f"Soy {self.name} y estudio en {self.university}")
+
+
+person1 = Person("Faber", 25, "doctor",)
+person2 = Person("Lina", 30, "Policia")
+person3 = Person("Hulx", 25 , "Hablo mucho")
+
+student1 = Student("Juan", 20, "estudiante", "Universidad Nacional")
+student2 = Student("Maria", 22, "estudiante", "Universidad de los Andes")
+
+print("--------------------------------------------------------")
+person1.best_regard()
+print("--------------------------------------------------------")
+person2.best_regard()
+print("--------------------------------------------------------")
+person3.xxx_ppp()
+print("--------------------------------------------------------")
+student1.greet()
+print("--------------------------------------------------------")
+student1.study()
+print("--------------------------------------------------------")
+student2.best_regard()
+print("--------------------------------------------------------")
+student2.study()
+print("--------------------------------------------------------")
+
+print(person2.name)
